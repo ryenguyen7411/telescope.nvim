@@ -122,6 +122,7 @@ files.live_grep = function(opts)
   end
 
   local args = flatten { vimgrep_arguments, additional_args }
+  print(args)
   opts.__inverted, opts.__matches = opts_contain_invert(args)
 
   local live_grepper = finders.new_job(function(prompt)
